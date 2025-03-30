@@ -124,6 +124,8 @@ import { App } from "./App";
 - Armazena valores que podem mudar e, quando isso acontece, o componente re-renderiza automaticamente para refletir a mudança na interface.
 - Usamos o hook useState para criar e atualizar o estado.
 - Quando eu altero meu state, eu atualizo a tela.
+- É uma variável que você altera no react que faz com que o componente seja re-renderizado.
+- Útil quando você quer fazer algo em resposta a interação do usuário
 
 ```jsx
 import { useState } from "react";
@@ -148,3 +150,7 @@ function App() {
 
 export default App;
 ```
+
+## O que é um Hook no React?
+
+- É uma função especial que permite usar recursos do React dentro de componentes funcionais, como state, efeitos colaterais e contexto.
