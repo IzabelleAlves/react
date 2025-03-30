@@ -31,3 +31,10 @@ npm creat vite@5.5.2 .
 * Depois disso, seleciona React e JavaScript.
 * npm i -> para instalar todas as dependências.
 * npm run dev -> para rodar o projeto.
+
+## O React usa o SPA
+
+- Single Page Aplication, que seria uma página simples para ser o index.html. Tudo que está na página não é adicionado diretamente nela, e sim adicionado pelo JS.
+- Traz velocidade: a navegação entre as páginas é muito mais rápida, pois não exige chamadas para um servidor.
+- Permite um alto nível de interatividade.
+- Experiência do Usuário: SPAs são altamente interativas e performáticas.
