@@ -38,3 +38,82 @@ npm creat vite@5.5.2 .
 - Traz velocidade: a navegação entre as páginas é muito mais rápida, pois não exige chamadas para um servidor.
 - Permite um alto nível de interatividade.
 - Experiência do Usuário: SPAs são altamente interativas e performáticas.
+
+## Exportações no React: Default vs Named ✨
+
+### **1. Exportação Padrão (Default Export)**
+
+Quando usamos `export default`, estamos dizendo que o arquivo exporta **apenas um item principal**. Isso permite que o nome do componente seja qualquer um na importação!
+
+**_Exemplo:_**
+
+```jsx
+function App() {
+  return <h1>Hello World!</h1>;
+}
+
+export default App;
+```
+
+**_Importando:_**
+
+```jsx
+import MeuComponente from "./App"; // Funciona, pois é export default!
+
+<MeuComponente />;
+```
+
+Aqui, o nome do componente pode ser qualquer um! `MeuComponente`, `Banana`, `SuperApp`... funciona porque só tem **um item sendo exportado por padrão**.
+
+---
+
+### **2. Exportação Nomeada (Named Export)**
+
+Quando usamos `export` antes da declaração, estamos exportando **de forma nomeada**. Nesse caso, o nome **deve ser mantido na importação**.
+
+**_Exemplo:_**
+
+```jsx
+export function App() {
+  return <h1>Hello World!</h1>;
+}
+```
+
+**_Importando:_**
+
+```jsx
+import { App } from "./App"; // Tem que usar chaves e o mesmo nome!
+
+<App />;
+```
+
+Se tentar importar sem chaves ou com outro nome:
+
+```jsx
+import MeuComponente from "./App"; ❌ // Erro!
+```
+
+Vai dar erro, porque exportação nomeada **exige o mesmo nome**.
+
+---
+
+### ✨ **3. Exportando no Final do Arquivo**
+
+Também podemos definir a função primeiro e exportar depois:
+
+```jsx
+function App() {
+  return <h1>Lindaaa</h1>;
+}
+
+export { App }; // Exportação nomeada no final
+```
+
+A importação continua sendo:
+
+```jsx
+import { App } from "./App";
+```
+
+- Use **`export default`** quando seu arquivo exporta **apenas um componente principal**. Assim, pode importar com qualquer nome.
+- Use **`export { algo }`** quando precisar exportar **múltiplos itens** do mesmo arquivo.
