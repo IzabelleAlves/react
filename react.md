@@ -117,3 +117,34 @@ import { App } from "./App";
 
 - Use **`export default`** quando seu arquivo exporta **apenas um componente principal**. Assim, pode importar com qualquer nome.
 - Use **`export { algo }`** quando precisar exportar **múltiplos itens** do mesmo arquivo.
+
+## States (ou, variáveis de Estado)
+
+- No React, o state é um objeto especial que guarda informações sobre um componente e pode mudar ao longo do tempo. - Permite que os componentes sejam dinâmicos e respondam a interações do usuário.
+- Armazena valores que podem mudar e, quando isso acontece, o componente re-renderiza automaticamente para refletir a mudança na interface.
+- Usamos o hook useState para criar e atualizar o estado.
+- Quando eu altero meu state, eu atualizo a tela.
+
+```jsx
+import { useState } from "react";
+//sempre importar o useState
+
+function App() {
+  const [message, setMessage] = useState("Olá mundo");
+  //Declaro a variável e digo que é um state; Quando eu quiser que ela mude, pgo o setMessage
+  return (
+    <div>
+      <h1>{message}</h1>
+      <button
+        onClick={() => {
+          setMessage("Olá, fui clidado");
+        }}
+      >
+        Mudar mensagem
+      </button>
+    </div>
+  );
+}
+
+export default App;
+```
