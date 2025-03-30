@@ -13,3 +13,21 @@
 - Pense neles como se fossem peças de LEGO.
 - Usa-se JSX para escrevê-los.
 - Um componente pe uma função JavaScript que retorna um JSX (HTML misturado com JS)
+
+## Usando o React
+
+- É necessário ter o node instalado na máquina. O node é uma ferramenta que permite que executemos o JavaScript fora do navegador.
+- Você instala o node e 'recebe' junto um npm (Node Package Manager), o gerenciador de pacotes do Node.js. Ele permite instalar, gerenciar e compartilhar bibliotecas e ferramentas JavaScript.
+- O vite facilita o uso do React e melhora a experiência de desenvolvimento.
+
+### Instalando o vite
+
+```bash
+npm creat vite@5.5.2 .
+```
+
+- Dessa forma instala uma versão específica do Vite.
+
+* Depois disso, seleciona React e JavaScript.
+* npm i -> para instalar todas as dependências.
+* npm run dev -> para rodar o projeto.
