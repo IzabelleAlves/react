@@ -154,3 +154,12 @@ export default App;
 ## O que é um Hook no React?
 
 - É uma função especial que permite usar recursos do React dentro de componentes funcionais, como state, efeitos colaterais e contexto.
+
+## O que é uma props?
+
+- São uma forma de passar dados de um componente pai para um componente filho. Eles são objetos que contêm valores que podem ser acessados dentro do componente filho.
+- São usadas para passar dados de um componente pai para um componente filho.
+- Elas são somente leitura (o componente filho não pode modificar os valores das props recebidas).
+- Permitem que os componentes sejam reutilizáveis e dinâmicos.
+- O App geralmente é o componente pai principal porque ele é o ponto de entrada da aplicação.
+- Fluxo de dados unidirecional: As informações fluem do pai para o filho, não o contrário.
